@@ -1,7 +1,7 @@
 module SimpleLike
   module Target
     def simple_like
-      has_many :likes, { as: :likeable, dependant: :destroy }
+      has_many :likes, { as: :likeable, dependent: :destroy }
     end
 
     def is_likeable
