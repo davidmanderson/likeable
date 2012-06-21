@@ -13,18 +13,19 @@ module Likeable
 
     def like!(instance)
       if is_likeable?(instance)
-        instance.likes << Like.create!(user: self)
+        instance.likes << Like.new(author: self) if !like?(instance)
+        instance.save!
       else
         # Return exception
       end
     end
 
     def like?(instance)
-      instance.likes.find_by_user_id(self).present?
+      instance.likes.where(author: self).present?
     end
 
     def destroy_like!(instance)
-      likes = instance.likes.find_by_user_id(self)
+      likes = instance.likes.where(author: self)
       likes.destroy_all if likes.present?
     end
 

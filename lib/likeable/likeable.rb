@@ -1,3 +1,0 @@
-module Likeable
-  # Your code goes here...
-end

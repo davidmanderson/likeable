@@ -9,5 +9,8 @@ module Likeable
     def self.included(model_class)
       model_class.extend Target
     end
+
+    IsLikeable = true
+    has_many :likes, { as: :likeable, dependant: :destroy }
   end
 end
