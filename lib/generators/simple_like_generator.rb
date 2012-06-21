@@ -1,10 +1,10 @@
 require 'rails/generators/migration'
 
-class LikeableGenerator < Rails::Generators::Base
+class SimpleLikeGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   def self.source_root
-    @_likeable_source_root ||= File.expand_path("../templates", __FILE__)
+    @_simple_like_source_root ||= File.expand_path("../templates", __FILE__)
   end
 
   def self.next_migration_number(path)
