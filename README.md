@@ -1,13 +1,13 @@
-# What is simple_like?
+# What is Likeable?
 
-simple_like is a tiny gem that allows you to add simple 'like' button functionality to existing models.
+Likeable is a tiny gem that allows you to add simple 'like' button functionality to existing models.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'simple_like'
+gem 'likeable'
 ```
 
 And then execute:
@@ -16,15 +16,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install simple_like
+    $ gem install likeable
 
 ## Usage
 
-To make a model likeable, simply extend/include the SimpleLike module.
+To make a model likeable, simply extend/include the Likeable module.
 
 ```ruby
 class Article
-  extend SimpleLike::Target
+  extend Likeable::Target
 end
 ```
 
@@ -32,7 +32,7 @@ end
 
 ```ruby
 class User
-  extend SimpleLike::User
+  extend Likeable::User
 end
 ```
 
