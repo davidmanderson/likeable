@@ -20,11 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-To make a model likeable, simply include the Likeable module.
+To make a model likeable, simply extend/include the Likeable module.
 
 ```ruby
 class Article
-  include Likeable::Target
+  extend Likeable::Target
 end
 ```
 
@@ -32,7 +32,7 @@ end
 
 ```ruby
 class User
-  include Likeable::User
+  extend Likeable::User
 end
 ```
 
