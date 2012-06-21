@@ -4,11 +4,11 @@ class CreateLikes < ActiveRecord::Migration
       t.references :likeable, polymorphic: true
       t.references :author, polymorphic: true
       t.timestamps
-
-      add_index :likes, :likeable_type
-      add_index :likes, :likeable_id
-      add_index :likes, :author_type
-      add_index :likes, :author_id
     end
+
+    add_index :likes, :likeable_type
+    add_index :likes, :likeable_id
+    add_index :likes, :author_type
+    add_index :likes, :author_id
   end
 end
