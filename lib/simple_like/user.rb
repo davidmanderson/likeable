@@ -20,7 +20,7 @@ module SimpleLike
 
   private
     def is_likeable?(instance)
-      instance.try(:is_likeable)
+      instance.class.try(:is_likeable)
     end
   end
 end
