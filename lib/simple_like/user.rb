@@ -31,7 +31,7 @@ module SimpleLike
 
   private
     def is_likeable?(instance)
-      instance.const_defined?(:IsLikeable)
+      instance.try(:is_likeable)
     end
   end
 end
