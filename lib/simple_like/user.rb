@@ -1,4 +1,4 @@
-module Likeable
+module SimpleLike
   module User
     def self.extended(model_class)
       model_class.instance_eval do
