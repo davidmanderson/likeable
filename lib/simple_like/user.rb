@@ -1,16 +1,5 @@
 module SimpleLike
   module User
-    def self.extended(model_class)
-      model_class.instance_eval do
-        extend User
-      end
-    end
-
-    def self.included(model_class)
-      model_class.extend User
-    end
-
-
     def like!(instance)
       if is_likeable?(instance)
         instance.likes << Like.new(author: self) if !like?(instance)
