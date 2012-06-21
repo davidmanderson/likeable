@@ -1,13 +1,15 @@
-# Likeable
+# What is Likeable?
 
-TODO: Write a gem description
+Likeable is a tiny gem that allows you to add simple 'like' button functionality to existing models.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
+    ```ruby
     gem 'likeable'
-
+    ```
+    
 And then execute:
 
     $ bundle
@@ -18,7 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To make a model likeable, simply include the Likeable module.
+
+    ```ruby
+    class Article
+      include Likeable::Target
+    end
+    ```
+
+...and to enable a user to have the ability to like.
+
+    ```ruby
+    class User
+      include Likeable::User
+    end
+    ```
+
+### Methods
+
+There are a few handy methods available to you.
+
+    ```ruby
+    article = Article.first
+
+    # Like an object
+    current_user.like! article
+    # Check whether user has already liked object
+    current_user.like? article
+    # Destroy an existing like
+    current_user.destroy_like! article
+    ```
 
 ## Contributing
 
