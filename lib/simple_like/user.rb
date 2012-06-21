@@ -2,8 +2,7 @@ module SimpleLike
   module User
     def like!(instance)
       if is_likeable?(instance)
-        instance.likes << Like.new(author: self) if !like?(instance)
-        instance.save!
+        instance.likes.create(author: self) if !like?(instance)
       else
         # Return exception
       end
