@@ -3,9 +3,9 @@ require File.expand_path('../lib/likeable/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Nick Pellant"]
-  gem.email         = ["nick.pellant@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["contact@nickpellant.com"]
+  gem.description   = %q{Likeable adds like functionality to existing models.}
+  gem.summary       = %q{Like functionality}
   gem.homepage      = ""
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

@@ -1,5 +1,6 @@
-require "likeable/version"
+require 'likeable/version'
 
 module Likeable
-  # Your code goes here...
+  autoload :Target, "likeable/target"
+  autoload :User,   "likeable/user"
 end
