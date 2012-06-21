@@ -10,7 +10,9 @@ module SimpleLike
       model_class.extend Target
     end
 
-    IsLikeable = true
-    has_many :likes, { as: :likeable, dependant: :destroy }
+    def simple_like
+      IsLikeable = true
+      has_many :likes, { as: :likeable, dependant: :destroy }
+    end
   end
 end
