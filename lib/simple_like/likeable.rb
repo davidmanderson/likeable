@@ -17,7 +17,7 @@ module SimpleLike
         true
       end
       
-      def like_by?(instance)
+      def liked_by?(instance)
         likes.where(author_id: instance.id, author_type: instance.class.name).present?
       end
     end
