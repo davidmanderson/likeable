@@ -16,6 +16,10 @@ module SimpleLike
       def is_likeable?
         true
       end
+      
+      def like_by?(instance)
+        likes.where(author_id: instance.id, author_type: instance.class.name).present?
+      end
     end
   end
 end
