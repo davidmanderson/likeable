@@ -24,7 +24,7 @@ module SimpleLike
         instance.likes.where(author_id: self, author_type: self.class.name).present?
       end
 
-      def destroy_like!(instance)
+      def unlike!(instance)
         likes = instance.likes.where(author_id: self, author_type: self.class.name)
         likes.destroy_all if likes.present?
       end
